@@ -132,6 +132,7 @@
 ;;; enable avy with evil-mode
 (define-key evil-normal-state-map (kbd "SPC") 'avy-goto-word-1)
 
+
 ;; set evil-emacs-state on following modes
 (dolist (mode '(
                 cider-repl-mode
@@ -142,6 +143,11 @@
   (add-to-list 'evil-emacs-state-modes mode))
 
 (add-hook 'cider-macroexpansion-mode-hook 'evil-emacs-state)
-
+(add-hook 'cider-mode-hook
+          (lambda ()
+            (define-key evil-normal-state-map (kbd "M-.") 'cider-find-var)))
+(add-hook 'emacs-lisp-mode-hook
+          (lambda ()
+            (define-key evil-normal-state-map (kbd "M-.") 'elisp-slime-nav-find-elisp-thing-at-point)))
 (provide 'init-evil)
 ;;; init-evil.el ends here
