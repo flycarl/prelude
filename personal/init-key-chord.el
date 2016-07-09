@@ -38,7 +38,7 @@
 ;; setup jk as ESC
 (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
 (key-chord-define evil-visual-state-map "jk" 'evil-normal-state)
-
+(setq key-chord-two-keys-delay 0.5)
 (defvar key-chord-tips '("Press <jk> to esacpe the evil-insert-state and evil-visual-state"))
 
 (setq prelude-tips (append prelude-tips key-chord-tips))

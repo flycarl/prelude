@@ -6,7 +6,7 @@
 
 (sp-local-pair 'clojure-mode "`" "`")
 
-(prelude-require-packages '(evil-smartparens  bind-key ag))
+(prelude-require-packages '(evil-smartparens bind-key hydra ag))
 (add-hook 'smartparens-enabled-hook #'evil-smartparens-mode)
 (setq ag-highlight-search t)
 
