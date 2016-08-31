@@ -7,8 +7,8 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; keybinding management
-(define-key smartparens-mode-map (kbd "C-<up>") 'sp-beginning-of-sexp)
-(define-key smartparens-mode-map (kbd "C-<down>") 'sp-end-of-sexp)
+(define-key smartparens-mode-map (kbd "C-S-a") 'sp-beginning-of-sexp)
+(define-key smartparens-mode-map (kbd "C-S-e") 'sp-end-of-sexp)
 
 (define-key smartparens-mode-map (kbd "C-M-f") 'sp-forward-sexp)
 (define-key smartparens-mode-map (kbd "C-M-b") 'sp-backward-sexp)
