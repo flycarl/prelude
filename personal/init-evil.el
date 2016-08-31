@@ -56,6 +56,8 @@
     ","  'avy-goto-char-2
     "."  'switch-to-previous-buffer
     "s"  'ag-project            ;; Ag search from project's root
+    "a"  'sp-beginning-of-sexp
+    "e"  'sp-end-of-sexp
     )
 )
 
@@ -75,9 +77,9 @@
 (evil-mode 1)
 (global-evil-surround-mode 1)
 
-(define-key evil-normal-state-map (kbd "C-A")
+(define-key evil-normal-state-map (kbd "C-\=")
   'evil-numbers/inc-at-pt)
-(define-key evil-normal-state-map (kbd "C-S-A")
+(define-key evil-normal-state-map (kbd "C-\-")
   'evil-numbers/dec-at-pt)
 
 ;;
